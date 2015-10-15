@@ -75,7 +75,7 @@ template4 ~/.conky-vision-icons/FFFFFF  # +4days
 #====================================
 #   WOEID (Where On Earth ID)
 #====================================
-template7 44418
+template7 766273
 
 
 #====================================
@@ -83,12 +83,10 @@ template7 44418
 #====================================
 template8 c
 
-
 #====================================
 #   Language (e.g. es_ES.UTF-8)
 #====================================
-template9  # leave empty for locale
-
+template9  es_ES.UTF-8 # leave empty for locale
 
 ###################################################
 ###################################################
@@ -194,3 +192,15 @@ ${execi 300 cp -f ${template2}/$(grep "yweather:forecast" ~/.cache/weather.xml |
 ${execi 300 cp -f ${template3}/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4').png ~/.cache/weather-4.png}${image ~/.cache/weather-4.png -p 390,268 -s 32x32}\
 \
 ${execi 300 cp -f ${template4}/$(grep "yweather:forecast" ~/.cache/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5').png ~/.cache/weather-5.png}${image ~/.cache/weather-5.png -p 496,268 -s 32x32}\
+#----------------------------------------
+#   user@host
+#----------------------------------------
+\
+\
+${font Poiret One:weight=Light:size=20}${color1}\
+${voffset 10}\
+${alignc}\
+${exec whoami}@${nodename}\
+${font}${color}
+\
+\
