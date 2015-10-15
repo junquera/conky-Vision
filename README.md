@@ -1,3 +1,6 @@
+Just a personal customization of the original conky-Vision.
+Added username@host at the end of the document. Weather from Madrid.
+
 ![preview](preview.png)
 
 
